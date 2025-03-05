@@ -75,5 +75,6 @@ This repository implements a hybrid deep learning model combining EfficientNetV2
 
 - **Available in the ****`weights/`**** directory**
 - Includes pre-trained weights for EfficientNetV2M, ViT-B16, ResNet-50, and the hybrid model.
+- These weights are used during inference and predict modes to generate results.
 
 
