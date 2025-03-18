@@ -28,7 +28,7 @@ Additionally, the repository supports the standalone use of EfficientNetV2M, ViT
 
 - **Clone the repository:**
   ```bash
-  git clone <repository_url>
+  git clone https://github.com/moralon2210/HybridEffNetV2M-ViT.git
   cd HybridEffNetV2M-ViT
 
 - **Install dependencies:**
