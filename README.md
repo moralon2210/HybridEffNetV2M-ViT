@@ -14,11 +14,11 @@ Additionally, the repository supports the standalone use of EfficientNetV2M, ViT
 - `inference_predict.py` - Inference and prediction script
 - `train.py` - Model training script
 - `train_loop.py` - Training loop utilities
+- `requirements.txt` - Dependency requirements
 - `configs/` - Configuration files
 - `Dataset/` - Dataset files
 - `data_utils/` - Data processing utilities
 - `models/` - Neural network models
-- `requirements/` - Dependency requirements
 - `results/` - Output results and run logs
 - `utils/` - Additional utility functions
 - `weights/` - Pre-trained model weights for all models
