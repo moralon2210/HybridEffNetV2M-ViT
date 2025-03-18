@@ -1,4 +1,4 @@
-# HybridEffNetV2M-ViT
+# Hybrid EffNetV2M-ViT
 Classification of Glioblastoma and Brain Metastasis Using a Hybrid EfficientNet-Vision Transformer Model
 
 ## Introduction
