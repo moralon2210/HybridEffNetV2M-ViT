@@ -21,7 +21,7 @@ Additionally, the repository supports the standalone use of EfficientNetV2M, ViT
 - `models/` - Neural network models
 - `results/` - Output results and run logs
 - `utils/` - Additional utility functions
-- `weights/` - Pre-trained model weights for all models
+- `weights/` - Pre-trained model weights for all models. Will be automatically downloaded when inference or predict is performed.
 
 
 ## Installation
