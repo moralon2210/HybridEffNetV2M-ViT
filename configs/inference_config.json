@@ -1,0 +1,28 @@
+{
+    "model": "EffNetV2M",
+    "device": {
+        "gpu": "cuda:2"
+    },
+    "system_paths": {
+            "test_dataset_path": "/media/df4-moran/Mor/Dataset/DataPreProcess/FinalDataForDL_2D_4/test/",
+            "test_csv_name": "test.csv"
+    },
+    "global_params": {
+        "with_plot": false,
+        "save_preds_per_fold": true
+    },
+    "dataset_params": {
+        "pixel_around_tumor": 3
+    },
+
+    "model_params": {
+        "num_workers": 8,
+        "test_batch_size": 8
+    },
+    "csv_columns": {
+        "target_col": "Group",
+        "patient_col": "Patient number",
+        "seg_col": "Seg path",
+        "slice_idx_col": "Slice idx"
+    }
+}

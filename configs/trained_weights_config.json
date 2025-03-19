@@ -1,0 +1,27 @@
+{
+    "EffNetV2M": {
+        "input_images": ["t1ce", "t2"],
+        "optimal_ths": 0.571190888,       
+	"resize_height": 224,
+        "resize_width": 224
+    },
+    "VitB16": {
+        "input_images": ["t1ce", "t2"],
+        "optimal_ths": 0.480914546,       
+	"resize_height": 224,
+        "resize_width": 224
+    },
+    "EffNetV2M_VitB16": {
+        "input_images": ["t1ce", "t2"],
+        "optimal_ths": 0.570244541,       
+	"resize_height": 224,
+        "resize_width": 224
+    },
+    "ResNet50": {
+        "input_images": ["t1ce", "t2"],
+        "optimal_ths": 0.486475339,       
+	"resize_height": 224,
+        "resize_width": 224
+
+    }
+}

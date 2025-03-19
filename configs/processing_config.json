@@ -1,0 +1,7 @@
+{
+	
+	"label_encoding":{
+		"GBM" : 0,
+		"Met" : 1	
+	}
+}

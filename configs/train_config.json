@@ -1,0 +1,55 @@
+{
+    "model": "EffNetV2M_VitB16",
+    "device": {
+        "gpu": "cuda:1"
+    },
+    "input_images": ["t1ce", "t2"],
+    "system_paths": {
+            "train_dataset_path": "/media/df4-moran/Mor/Dataset/DataPreProcess/FinalDataForDL_2D_4/train/",
+            "train_csv_name": "train.csv"
+    },
+	"global_params": {
+		"with_plot": false,
+		"save_train_valid_idx" : false
+	},
+    "dataset_params": {
+        "vertical_flip": 0.5,
+        "horizontal_flip": 0.5,
+        "rotate_limit": 5,
+        "scale_limit": [
+            0.95,
+            1.05
+        ],
+        "shift_limit": 0.05,
+        "slice_thick": 0,
+        "pixel_around_tumor": 3,
+        "resize_height": 224,
+        "resize_width": 224
+		 
+    },
+    "model_params": {
+        "optimizer": "AdamW",
+        "momentum": 0.9,
+	"dropout":0.3,
+        "k": 5,
+        "epochs": 30,
+        "patience": 4,
+        "num_workers": 8,
+        "learning_rate": 0.00001,
+        "weight_decay": 0.01,
+        "scheduler_lr_patience": 1,
+        "scheduler_lr_factor": 0.2,
+        "train_barch_size": 16,
+        "test_batch_size": 16,
+        "with_class_weights": true,
+        "with_transfer_learning": true,
+        "save_best_model": true
+
+    },
+    "csv_columns": {
+        "target_col": "Group",
+        "patient_col": "Patient number",
+        "seg_col": "Seg path",
+		"slice_idx_col": "Slice idx"
+    }
+}

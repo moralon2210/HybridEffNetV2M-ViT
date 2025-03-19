@@ -1,0 +1,3 @@
+Patient number,Group,Seg path,t1ce,t2,Slice idx
+Patient_001,Met,PatientImg\Patient_001\Seg.nii.gz,PatientImg\Patient_001\t1ce.nii.gz,PatientImg\Patient_001\t2.nii.gz,107
+Patient_001,Met,PatientImg\Patient_001\Seg.nii.gz,PatientImg\Patient_001\t1ce.nii.gz,PatientImg\Patient_001\t2.nii.gz,108

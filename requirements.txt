@@ -1,0 +1,11 @@
+albumentations==1.4.0
+efficientnet_pytorch==0.7.1
+intensity_normalization==2.2.4
+matplotlib==3.9.2
+nibabel==3.2.2
+numpy==1.24.4
+pandas==2.2.2
+scikit_learn==1.2.2
+seaborn==0.13.2
+torch==1.12.1
+torchvision==0.13.1
