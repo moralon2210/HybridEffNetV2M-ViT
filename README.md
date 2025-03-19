@@ -75,6 +75,7 @@ Additionally, the repository supports the standalone use of EfficientNetV2M, ViT
 ## Pre-trained Weights
 
 - **Available in the ****`weights/`**** directory**
+- Weights directory will be automatically downloaded once inference or predict are performed.
 - Includes pre-trained weights for hybrid EffNetV2M-ViT, EfficientNetV2M, ViT-B16 and ResNet-50.
 - These weights are **trained over 5 folds and are used during inference and prediction modes** to generate results.
 
