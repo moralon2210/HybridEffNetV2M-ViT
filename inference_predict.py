@@ -23,6 +23,9 @@ def main(mode):
     config.logger = get_logger(mode, config.curr_run_results_path)
     config.logger.info(f"Running {mode} of {config.test} for {config.model_type_str}")
     config.logger.info(F"\nCurrent run number is {config.curr_run_results_folder}")
+
+    # download weights if don't exist 
+    inference_utils.download_weights(config)
     
     #Load model and weights of each fold
     fold_models = [HybridVisionClassification(config,1).to(config.device) for _ in range(len(config.weights_paths))]
