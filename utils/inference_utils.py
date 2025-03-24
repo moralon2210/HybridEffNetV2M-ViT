@@ -1,5 +1,6 @@
-
 import os
+import shutil
+import gdown
 import pandas as pd
 import json
 from data_utils.DataPreProcess import df_processing
@@ -14,7 +15,35 @@ from torch.utils.data import DataLoader
 from utils.model_utils import agg_predictions_per_tumor, get_model_preds
 from utils.results_util import create_results_df, save_metrices_results, save_predictions
 
-pd.set_option('future.no_silent_downcasting', True)
+#pd.set_option('future.no_silent_downcasting', True)
+
+def download_weights(config):
+    model_weights_id_dict = {'VitB16':'1U14ryUmjHyeE9B1DjPC9Pnn-e0-Evp3P',
+                           'ResNet50':'1U4drJRssBFysdq6HzAFld_CBqp4j0YmX',
+                           'EffNetV2M_VitB16':'1U5ZwRyhAQeKo0wAnNIC6VpZSXzP5oNhI',
+                           'EffNetV2M':'1U7jO-Lntqf9fa26Xb834z0d2yjaZ-NyF'}
+    
+    # Check if exists
+    if os.path.exists(config.weights_folder):
+        if len(glob.glob1(config.weights_folder,'*.pth'))==5:
+            config.logger.info(f"{config.model_type_str} weights folder was found..")
+            return
+        else:
+            # Current folder content is only partial, delete and re-download
+            shutil.rmtree(config.weights_folder)
+                                                     
+    # Download
+    model_id = model_weights_id_dict[config.model_type_str]
+    path = f"https://drive.google.com/drive/folders/{model_id}"
+    config.logger.info(f"Downloading {config.model_type_str} weights from web..")
+    gdown.download_folder(path, output=config.weights_folder, quiet=False, use_cookies=False)
+    
+
+def get_fold_test_preds(model, test, test_loader, test_len, test_preds_len, config, has_labels):
+    """Get predictions per slice and aggregate predictions per tumor."""
+    test_preds, test_labels = get_model_preds(model, test_loader, test_len, config.device, has_labels)
+    agg_mean_predictions, test_tumor_labels, segs = agg_predictions_per_tumor(test.segs_list, test_preds, test_labels)
+    return agg_mean_predictions, test_tumor_labels, segs
 
 def get_fold_test_preds(model, test, test_loader, test_len, test_preds_len, config, has_labels):
     """Get predictions per slice and aggregate predictions per tumor."""
