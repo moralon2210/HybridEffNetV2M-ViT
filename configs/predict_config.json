@@ -4,7 +4,7 @@
         "gpu": "cuda:2"
     },
     "system_paths": {
-            "test_dataset_path": "/media/df4-moran/Mor/Dataset/DataPreProcess/FinalDataForDL_2D_4/test/",
+            "test_dataset_path": "Dataset/test",
             "test_csv_name": "test.csv"
     },
     "global_params": {
