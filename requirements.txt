@@ -1,5 +1,6 @@
 albumentations==1.4.0
 efficientnet_pytorch==0.7.1
+gdown==5.2.0
 intensity_normalization==2.2.4
 matplotlib==3.9.2
 nibabel==3.2.2
