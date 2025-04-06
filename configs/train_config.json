@@ -5,7 +5,7 @@
     },
     "input_images": ["t1ce", "t2"],
     "system_paths": {
-            "train_dataset_path": "/media/df4-moran/Mor/Dataset/DataPreProcess/FinalDataForDL_2D_4/train/",
+            "train_dataset_path": "Dataset/train",
             "train_csv_name": "train.csv"
     },
 	"global_params": {
