@@ -1,10 +1,20 @@
-# Hybrid EffNetV2M-ViT
-Classification of Glioblastoma and Brain Metastasis Using a Hybrid EfficientNet-Vision Transformer Model
+# MRI Tumor Classification — Hybrid CNN & Vision Transformer Model
+Classification of Glioblastoma and Brain Metastasis Using a Hybrid EfficientNet–Vision Transformer Architecture
+
+## 🧠 Model Architecture
+
+**Hybrid CNN–Vision Transformer Architecture for MRI-based Brain Tumor Classification**
+
+![Hybrid CNN–ViT Architecture](assets/Architecture.png)
+
+**Figure.** The input MRI image is processed in parallel by two independent feature extractors — ViT-B/16 and EfficientNet-V2M.  
+Each network produces a high-level embedding vector. The resulting representations are concatenated and passed through a fully connected classification layer to generate the final prediction (GBM vs BM).
 
 ## Introduction
 
-This repository implements a hybrid deep learning model combining EfficientNetV2M and ViT-B16 to classify glioblastoma (GBM) and brain metastases (BM) using MRI images. The model integrates EfficientNetV2M and ViT-B16 architectures to leverage the complementary strengths of convolutional neural networks (CNNs) and Vision Transformers (ViTs) to optimize tumor classification performance.
+This repository implements a hybrid deep learning model combining EfficientNetV2M and ViT-B16 to classify glioblastoma (GBM) and brain metastases (BM) using MRI images. The model integrates EfficientNetV2M and ViT-B16 architectures to leverage the complementary strengths of convolutional neural networks (CNNs) and Vision Transformers (ViTs) to optimize tumor classification performance.  
 Additionally, the repository supports the standalone use of EfficientNetV2M, ViT-B16, and ResNet-50 as individual architectures.
+
 
 ## Directory Structure
 
