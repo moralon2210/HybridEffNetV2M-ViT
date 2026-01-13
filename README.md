@@ -5,9 +5,9 @@ Classification of Glioblastoma and Brain Metastasis Using a Hybrid EfficientNet�
 
 **Hybrid CNN–Vision Transformer Architecture for MRI-based Brain Tumor Classification**
 
-![Hybrid CNN–ViT Architecture](assets/Architecture.png)
+![Hybrid CNN–ViT Architecture](assests/Architecture.png)
 
-**Figure.** The input MRI image is processed in parallel by two independent feature extractors — ViT-B/16 and EfficientNet-V2M.  
+The input MRI image is processed in parallel by two independent feature extractors — ViT-B/16 and EfficientNet-V2M.  
 Each network produces a high-level embedding vector. The resulting representations are concatenated and passed through a fully connected classification layer to generate the final prediction (GBM vs BM).
 
 ## Introduction
